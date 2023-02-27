@@ -7,6 +7,7 @@ from django.db.models import QuerySet
 
 # DRF
 from rest_framework.viewsets import ViewSet
+from rest_framework.decorators import action
 from rest_framework.request import Request
 from rest_framework.response import Response
 from rest_framework.permissions import (
@@ -44,3 +45,21 @@ class CardViewSet(ViewSet):
             serializer.data,
             status=200
         )
+    
+    @action(
+        methods=["GET"],
+        detail=False,
+        url_path="aaa",
+        permission_classes = (
+            AllowAny,
+        ),
+    )
+    def check_card(
+        self,
+        request: Request,
+        *args,
+        **kwargs
+    ) -> Response:
+        return Response({
+            "message": "temp"
+        })
