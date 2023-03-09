@@ -24,7 +24,8 @@ DJANGO_AND_THIRD_PARTY_APPS = [
 PROJECT_APPS = [
     'lessons.apps.LessonsConfig',
     'banks.apps.BanksConfig',
-    'auths.apps.AuthsConfig'
+    'auths.apps.AuthsConfig',
+    'asynics.apps.AsynicsConfig'
 ]
 
 INSTALLED_APPS = DJANGO_AND_THIRD_PARTY_APPS + PROJECT_APPS
@@ -135,3 +136,7 @@ SIMPLE_JWT = {
     "SLIDING_TOKEN_OBTAIN_SERIALIZER": "rest_framework_simplejwt.serializers.TokenObtainSlidingSerializer",
     "SLIDING_TOKEN_REFRESH_SERIALIZER": "rest_framework_simplejwt.serializers.TokenRefreshSlidingSerializer",
 }
+
+LIST_API = [
+    'https://raw.githubusercontent.com/jokecamp/FootballData/master/EPL%202016%20-%202017/2016-08-13.all-epl-games.json',
+]

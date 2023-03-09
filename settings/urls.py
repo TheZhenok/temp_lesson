@@ -18,6 +18,7 @@ from rest_framework_simplejwt.views import (
 from lessons.views import BookView
 from banks.views import CardViewSet
 from auths.views import RegisterView
+from asynics.views import AsyncViewSet
 
 
 urlpatterns = [
@@ -61,6 +62,10 @@ router.register(
 router.register(
     "banks",
     viewset=CardViewSet
+)
+router.register(
+    "async",
+    viewset=AsyncViewSet
 )
 
 urlpatterns += [
