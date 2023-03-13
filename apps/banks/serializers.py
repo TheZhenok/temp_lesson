@@ -8,8 +8,10 @@ from rest_framework import serializers
 # Local
 from .models import Card
 
+from auths.models import CUser
 
-User: AbstractBaseUser = get_user_model()
+
+User: AbstractBaseUser = CUser
 
 class UserSerializer(serializers.ModelSerializer):
     """User."""

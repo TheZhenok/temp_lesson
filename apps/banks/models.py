@@ -3,12 +3,14 @@ from datetime import date, timedelta
 
 # Django
 from django.db import models
-from django.contrib.auth import get_user_model
+# from django.contrib.auth import get_user_model
 from django.contrib.auth.models import AbstractBaseUser
 from django.core.validators import MinLengthValidator
 
+from auths.models import CUser
 
-User: AbstractBaseUser = get_user_model()
+
+User: AbstractBaseUser = CUser
 
 class Card(models.Model):
     """Card for user."""

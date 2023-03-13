@@ -2,10 +2,13 @@
 from typing import Optional
 
 # Django
-from django.contrib.auth.models import User
 from django.db import models
 from django.core.exceptions import ValidationError
 from django.db.models import QuerySet
+from auths.models import CUser
+
+
+User = CUser
 
 
 class BookManager(models.Manager):
